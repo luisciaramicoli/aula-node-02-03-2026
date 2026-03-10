@@ -1,0 +1,9 @@
+get http://localhost:3000/saudacao/Luis
+
+#####
+POST http://localhost:3000/saudacao
+Content-Type: application/json
+
+{
+    "nome": "Luis Gustavo"
+}

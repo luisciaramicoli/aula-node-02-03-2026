@@ -11,7 +11,17 @@ app.get("/", (req: Request, rest: Response) => {
 
 app.get("/saudacao/:nome", (req: Request, res: Response)=> {
     const nome  = req.params.nome;
-    res.send("Olá " + nome);
+    res.json({
+        mensagem: `Olá ${nome}!`
+    })
+})
+
+app.post("/saudacao", (req: Request, res: Response) => {
+    const {nome} = req.body;
+
+    res.json({
+        mensagem: `Olá ${nome}`
+    })
 })
 
 app.listen(PORT, () => {

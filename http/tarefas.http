@@ -1,0 +1,25 @@
+@url = http://localhost:3000/tarefas
+
+get {{url}}
+
+####
+get {{url}}/20
+
+####
+POST  {{url}}
+Content-Type: application/json
+
+{
+    "titulo": "Fazer prova"
+}
+
+####
+PUT  {{url}}/2
+Content-Type: application/json
+
+{
+    "titulo": "mudar prova"
+}
+
+####
+DELETE {{url}}/1
